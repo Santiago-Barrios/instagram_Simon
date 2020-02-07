@@ -32,7 +32,7 @@ body{
   right: 0;
   bottom: 0;
   top: 0;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   color: white;
@@ -52,5 +52,26 @@ body{
 {
   .post-list{
     grid-gap: 3px;
+  }
+  .post-likes,
+  .post-comments{
+    width: 50px;
+    display: inline-block;
+    margin: 7px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 480px)
+{
+  .post-likes,
+  .post-comments{
+    width: 30px;
+    display: inline-block;
+    margin: 7px;
+    font-weight: bold;
+  }
+  .post-list{
+    height: 100%;
   }
 }
